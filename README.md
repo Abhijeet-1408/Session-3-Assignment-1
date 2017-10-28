@@ -8,6 +8,7 @@ It is the master daemon of Yarn. It manages the global assignments of resources 
 Resource Manager has two Main components
 
 Scheduler
+
 Application manager
 
 a. Scheduler
