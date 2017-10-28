@@ -33,4 +33,37 @@ Hadoop 2.x YARN has the following benefits.
 
 HDFS: HDFS stands for Hadoop Distributed File System. It is also know as HDFS V2 as it is part of Hadoop 2.x with some enhanced features. It is used as a Distributed Storage System in Hadoop Architecture.
 
+HDFS  Components:
+
+There are two major components of Hadoop HDFS- NameNode and DataNode. Let’s now discuss these Hadoop HDFS Components-
+
+i. NameNode
+
+It is also known as Master node. NameNode does not store actual data or dataset. NameNode stores Metadata i.e. number of blocks, their location, on which Rack, which Datanode the data is stored and other details. It consists of files and directories.
+
+Tasks of HDFS NameNode
+
+Manage file system namespace.
+Regulates client’s access to files.
+Executes file system execution such as naming, closing, opening files and directories.
+ii. DataNode
+
+It is also known as Slave. HDFS Datanode is responsible for storing actual data in HDFS. Datanode performs read and write operation as per the request of the clients. Replica block of Datanode consists of 2 files on the file system. The first file is for data and second file is for recording the block’s metadata. HDFS Metadata includes checksums for data. At startup, each Datanode connects to its corresponding Namenode and does handshaking. Verification of namespace ID and software version of DataNode take place by handshaking. At the time of mismatch found, DataNode goes down automatically.
+
+Tasks of HDFS DataNode
+
+DataNode performs operations like block replica creation, deletion, and replication according to the instruction of NameNode.
+DataNode manages data storage of the system.
+
 Mapreduce: Map Reduce is a Batch Processing or Distributed Data Processing Module. It is also know as “MR V1” as it is part of Hadoop 1.x with some updated features.
+Working of MapReduce
+
+MapReduce works by breaking the processing into two phases:
+
+Map phase
+Reduce phase
+Each phase has key-value pairs as input and output. In addition, programmer also specifies two functions: map function and reduce function
+
+Map function takes a set of data and converts it into another set of data, where individual elements are broken down into tuples (key/value pairs).
+
+Reduce function takes the output from the Map as an input and combines those data tuples based on the key and accordingly modifies the value of the key.
