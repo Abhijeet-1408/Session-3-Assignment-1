@@ -9,6 +9,7 @@ Resource Manager has two Main components
 
 Scheduler
 Application manager
+
 a. Scheduler
 
 The scheduler is responsible for allocating the resources to the running application. The scheduler is pure scheduler it means that it performs no monitoring no tracking for the application and even doesn’t guarantees about restarting failed tasks either due to application failure or hardware failures.
